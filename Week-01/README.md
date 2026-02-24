@@ -1,0 +1,100 @@
+# 📝 Static Exam Website (MVP)
+
+A lightweight, vanilla JavaScript examination platform. This project is built as an MVP to help students practice exams with features like timers, scoring, and history—all running locally in the browser.
+
+---
+
+## 📂 Project Structure
+The project is organized to support a 6-person team working on different modules simultaneously.
+
+/exam-site
+├── index.html          # Home: Set subject, question count, and time
+├── play.html           # Exam: Core test-taking interface
+├── score.html          # Score: Results and performance summary
+├── history.html        # History: List of all past attempts
+├── review.html         # Review: Detailed check of correct/wrong answers
+├── /data
+│   └── questions.json  # Centralized question bank (JSON data)
+├── /assets
+│   └── style.css       # Global styling (Flexbox, buttons, cards)
+└── /js
+    ├── data.js         # Logic for fetching data from questions.json
+    ├── engine.js       # Core logic (Shuffling, picking, scoring)
+    ├── timer.js        # Countdown and auto-submit logic
+    ├── storage.js      # LocalStorage API (save/load attempts)
+    ├── ui.js           # UI helper functions for rendering components
+    ├── main-index.js   # Main script for index.html
+    ├── main-play.js    # Main script for play.html
+    ├── main-score.js   # Main script for score.html
+    ├── main-history.js # Main script for history.html
+    └── main-review.js  # Main script for review.html
+
+---
+
+## 🏗️ Git Workflow for the Team
+Follow these steps to avoid code conflicts.
+
+### 1. Initial Setup
+git clone <repository-url>
+cd exam-site
+
+### 2. Daily Routine
+1. Pull the latest code:
+   git pull origin main
+2. Do your coding and testing.
+3. Save and Push:
+   git add .
+   git commit -m "feat: your feature description"
+   git push origin main
+
+---
+
+## 📊 Data Contracts
+
+### 1. Question Format (Stored in /data/questions.json)
+{
+  "id": "M01",
+  "subject": "Math",
+  "prompt": "12 * 12 = ?",
+  "options": ["124", "144", "132", "148"],
+  "correctIndex": 1,
+  "difficulty": "easy"
+}
+
+### 2. Attempt Format (Stored in LocalStorage)
+{
+  "attemptId": "2026-02-24T12:30:00.000Z",
+  "subject": "Math",
+  "total": 10,
+  "correctCount": 8,
+  "scorePct": 80,
+  "timeUsedSec": 521,
+  "questions": [...],
+  "answers": [1, 0, null, 2]
+}
+
+---
+
+## 🚀 How to Run
+Since we use ES6 Modules (type="module"), you must use a local server:
+
+1. VS Code Live Server: Right-click index.html -> "Open with Live Server".
+2. Python: Run "python -m http.server 5500" and visit http://localhost:5500.
+
+---
+
+## 👥 Roles & Responsibilities
+- **Person A (Integrator / QA)**: Acts as the project manager, handles the GitHub repository, merges code from all teammates, and performs the final QA checklist to ensure the project is bug-free before submission.
+- **Person B (UI/UX & Content Writer)**: Responsible for the global CSS styling, building responsive layouts for all pages, and populating the `questions.json` bank with 30-60 items.
+- **Person C (Exam Engine)**: Develops the core logic for rendering questions from the JSON data, managing the navigation state (Next/Prev), and tracking user-selected answers.
+- **Person D (Timer & Scoring)**: Implements the countdown timer functionality, handles auto-submission when time runs out, and develops the automated scoring calculation logic.
+- **Person E (Storage & Review)**: Manages data persistence using the LocalStorage API and builds the user interface and logic for both the History and Review pages.
+
+---
+
+## 👥 Week 1 Tasks: HTML/CSS Skeleton & Navigation
+- **Person A (Integrator):** Initialize the GitHub repository and set up the exact folder structure. Create the base `index.html` and ensure all 5 pages are correctly linked via buttons to test navigation.
+- **Person B (UI/UX Designer):** Create the global `assets/style.css` file. Define common styles: the main container width, typography, and a consistent button component that the whole team will use.
+- **Person C (Exam Layout):** Build the HTML structure for `play.html`. Create the placeholders for the question card, the list of answer options (as clickable blocks), and the navigation footer (Next, Prev, Submit).
+- **Person D (Home & Score Layout):** Build the HTML for `index.html` (subject selection cards) and `score.html` (the final result card with buttons to Restart, view History, or Review).
+- **Person E (History & Review Layout):** Build the HTML for `history.html` (a list-style layout for past attempts) and `review.html` (a stacked layout to compare user answers with correct answers).

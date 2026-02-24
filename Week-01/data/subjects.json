@@ -1,0 +1,18 @@
+[
+  {
+    "id": "math",
+    "name": "Mathematics"
+  },
+  {
+    "id": "english",
+    "name": "English"
+  },
+  {
+    "id": "cs",
+    "name": "Computer Science"
+  },
+  {
+    "id": "physics",
+    "name": "Physics"
+  }
+]
