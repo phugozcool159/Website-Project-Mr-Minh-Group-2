@@ -7,6 +7,7 @@ A lightweight, vanilla JavaScript examination platform. This project is built as
 ## 📂 Project Structure
 The project is organized to support a 6-person team working on different modules simultaneously.
 
+```
 /exam-site
 ├── index.html          # Home: Set subject, question count, and time
 ├── play.html           # Exam: Core test-taking interface
@@ -28,6 +29,7 @@ The project is organized to support a 6-person team working on different modules
     ├── main-score.js   # Main script for score.html
     ├── main-history.js # Main script for history.html
     └── main-review.js  # Main script for review.html
+```
 
 ---
 
@@ -35,23 +37,30 @@ The project is organized to support a 6-person team working on different modules
 Follow these steps to avoid code conflicts.
 
 ### 1. Initial Setup
+```bash
 git clone <repository-url>
 cd exam-site
+```
 
 ### 2. Daily Routine
 1. Pull the latest code:
+   ```bash
    git pull origin main
+   ```
 2. Do your coding and testing.
 3. Save and Push:
+   ```bash
    git add .
    git commit -m "feat: your feature description"
    git push origin main
+   ```
 
 ---
 
 ## 📊 Data Contracts
 
 ### 1. Question Format (Stored in /data/questions.json)
+```json
 {
   "id": "M01",
   "subject": "Math",
@@ -60,8 +69,10 @@ cd exam-site
   "correctIndex": 1,
   "difficulty": "easy"
 }
+```
 
 ### 2. Attempt Format (Stored in LocalStorage)
+```json
 {
   "attemptId": "2026-02-24T12:30:00.000Z",
   "subject": "Math",
@@ -72,6 +83,7 @@ cd exam-site
   "questions": [...],
   "answers": [1, 0, null, 2]
 }
+```
 
 ---
 
@@ -79,7 +91,10 @@ cd exam-site
 Since we use ES6 Modules (type="module"), you must use a local server:
 
 1. VS Code Live Server: Right-click index.html -> "Open with Live Server".
-2. Python: Run "python -m http.server 5500" and visit http://localhost:5500.
+2. Python: Run the following command and visit http://localhost:5500:
+   ```bash
+   python -m http.server 5500
+   ```
 
 ---
 
