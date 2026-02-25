@@ -5,7 +5,7 @@ A lightweight, vanilla JavaScript examination platform. This project is built as
 ---
 
 ## 📂 Project Structure
-The project is organized to support a 6-person team working on different modules simultaneously.
+The project is organized to support a 5-person team working on different modules simultaneously. The project is deployed on: https://basicwebsiteproject.vercel.app/
 
 ```
 /exam-site
@@ -98,18 +98,9 @@ Since we use ES6 Modules (type="module"), you must use a local server:
 
 ---
 
-## 👥 Roles & Responsibilities
-- **Person A (Integrator / QA)**: Acts as the project manager, handles the GitHub repository, merges code from all teammates, and performs the final QA checklist to ensure the project is bug-free before submission.
-- **Person B (UI/UX & Content Writer)**: Responsible for the global CSS styling, building responsive layouts for all pages, and populating the `questions.json` bank with 30-60 items.
-- **Person C (Exam Engine)**: Develops the core logic for rendering questions from the JSON data, managing the navigation state (Next/Prev), and tracking user-selected answers.
-- **Person D (Timer & Scoring)**: Implements the countdown timer functionality, handles auto-submission when time runs out, and develops the automated scoring calculation logic.
-- **Person E (Storage & Review)**: Manages data persistence using the LocalStorage API and builds the user interface and logic for both the History and Review pages.
-
----
-
-## 👥 Week 1 Tasks: HTML/CSS Skeleton & Navigation
+## 👥 First week tasks: HTML/CSS Skeleton & Navigation
 - **Person A (Integrator):** Initialize the GitHub repository and set up the exact folder structure. Create the base `index.html` and ensure all 5 pages are correctly linked via buttons to test navigation.
 - **Person B (UI/UX Designer):** Create the global `assets/style.css` file. Define common styles: the main container width, typography, and a consistent button component that the whole team will use.
 - **Person C (Exam Layout):** Build the HTML structure for `play.html`. Create the placeholders for the question card, the list of answer options (as clickable blocks), and the navigation footer (Next, Prev, Submit).
-- **Person D (Home & Score Layout):** Build the HTML for `index.html` (subject selection cards) and `score.html` (the final result card with buttons to Restart, view History, or Review).
-- **Person E (History & Review Layout):** Build the HTML for `history.html` (a list-style layout for past attempts) and `review.html` (a stacked layout to compare user answers with correct answers).
+- **Person D (Home & Score Layout):** Build the HTML for `score.html` (the final result card with buttons to Restart, Review, or view History). Note: the Restart button navigate user to homepage.
+- **Person E (History & Review Layout):** Build the HTML for `history.html` (a list-style layout for past attempts, each attempt show Test date, subject, and point) and `review.html` (a stacked layout to compare user answers with correct answers).
