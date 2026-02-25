@@ -1,0 +1,78 @@
+/* RESET css thành mặc định */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* chỉnh thuộc tính của phần body (nền, phong chữ...) */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: #87CEEB; /* xanh da trời */
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  min-height:100vh;
+}
+
+/* chỉnh khung bao quanh */
+.container{
+  width:800px;
+  background:white;
+  margin-top:60px;
+  padding:40px;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.15);
+  text-align:center;
+}
+
+/* tiêu đề (EXAM PORTAL) */
+h1{
+  font-size:46px;
+  color:#0a2a66;
+  margin-bottom:10px;
+  text-align:center;
+  letter-spacing:1px;
+}
+
+/* chỉnh nút */
+button{
+  padding:12px 22px;
+  font-size:16px;
+  border:none;
+  border-radius:8px;
+  margin:10px;
+  cursor:pointer;
+  background:#e53935; /* đỏ */
+  color:white;
+  transition:0.3s;
+}
+
+/* hiệu ứng khi đưa chuột vào nút  */
+button:hover{
+  background:#b71c1c;
+  transform:scale(1.05);
+}
+
+/* chỉnh style chô từng phần (gắn class="card) */
+.card{
+  border:1px solid #ddd;
+  padding:20px;
+  margin:10px;
+  border-radius:10px;
+  background:#f7f9fc;
+}
+
+/* lấy font từ google và sử dụng */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+
+.welcome-text{
+  font-family: 'Playfair Display', serif;
+  font-size:24px;
+  font-style: italic;          /* chữ nghiêng */
+  color:#2c3e50;
+  margin-top:25px;
+  margin-bottom:60px;
+  line-height:1.9;
+  letter-spacing:1px;
+}
