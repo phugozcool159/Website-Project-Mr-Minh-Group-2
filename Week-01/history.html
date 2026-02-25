@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lịch sử làm bài</title>
+
+  <!-- CSS dùng chung cho toàn project -->
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <!-- ============================= -->
+  <!-- CONTAINER CHÍNH (giữ layout gọn) -->
+  <!-- ============================= -->
+  <div class="container">
+
+    <!-- ====== TIÊU ĐỀ TRANG ====== -->
+    <header class="page-header">
+      <h1>Lịch sử làm bài</h1>
+      <p>Các lần làm bài đã lưu</p>
+    </header>
+
+    <!-- ================================= -->
+    <!-- DANH SÁCH CÁC LẦN LÀM BÀI (HISTORY) -->
+    <!-- ================================= -->
+    <section class="history-list">
+
+      <!-- ===== MỘT LẦN LÀM BÀI (CARD) ===== -->
+      <!-- JS sẽ clone block này để render -->
+      <div class="history-card">
+
+        <!-- Thông tin cơ bản -->
+        <div class="history-info">
+          <p><strong>Môn:</strong> Toán</p>
+          <p><strong>Ngày:</strong> 24/02/2026</p>
+        </div>
+
+        <!-- Kết quả -->
+        <div class="history-score">
+          <p><strong>Điểm:</strong> 8 / 10</p>
+          <p><strong>Tỉ lệ:</strong> 80%</p>
+        </div>
+
+        <!-- Nút xem chi tiết -->
+        <!-- JS sẽ gắn link review.html?id=... -->
+        <button class="btn btn-secondary">
+          Xem lại
+        </button>
+
+      </div>
+      <!-- ===== KẾT THÚC 1 CARD ===== -->
+
+
+      <!-- ===== CARD MẪU THỨ 2 (MINH HỌA) ===== -->
+      <div class="history-card">
+        <div class="history-info">
+          <p><strong>Môn:</strong> Anh văn</p>
+          <p><strong>Ngày:</strong> 22/02/2026</p>
+        </div>
+
+        <div class="history-score">
+          <p><strong>Điểm:</strong> 6 / 10</p>
+          <p><strong>Tỉ lệ:</strong> 60%</p>
+        </div>
+
+        <button class="btn btn-secondary">
+          Xem lại
+        </button>
+      </div>
+
+    </section>
+
+    <!-- ================= -->
+    <!-- NÚT ĐIỀU HƯỚNG -->
+    <!-- ================= -->
+    <footer class="page-footer">
+      <!-- Quay về trang chủ -->
+      <a href="index.html" class="btn btn-primary">
+        Về trang chủ
+      </a>
+    </footer>
+
+  </div>
+
+  <!-- ============================= -->
+  <!-- JS RIÊNG CHO TRANG HISTORY -->
+  <!-- (render từ localStorage) -->
+  <!-- ============================= -->
+  <script src="js/main-history.js"></script>
+
+</body>
+</html>
