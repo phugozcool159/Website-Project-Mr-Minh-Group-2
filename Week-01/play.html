@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "utf-8">
+        <meta name="viewport" content = "device-width, initial-scale = 1" />
+        <link rel="stylesheet" href="style.css"/>
+        <title>Exam in progress</title>
+
+    </head>
+
+    <body>
+        <!--header-->
+        <header class="header">
+            <div class="top-left-header">
+                <h1>Exam screen</h1>
+                <p class="examSubtitle">Subject: <span id="subjectLabel">not yet</span></p>
+                <p class="examTime">🕓</p>
+            </div>
+
+            <div class="top-right-header">
+                <p id="progress">1/10</p>
+            
+            </div>
+        </header>        
+
+        <main>
+          <h2 id="question">Question will appear here</h2>
+
+          <div id="answers">
+            <button type="button">A. Option A</button>
+            <button type="button">B. Option B</button>
+            <button type="button">C. Option C</button>
+            <button type="button">D. Option D</button>
+          </div>
+        </main>
+
+        <footer> 
+            <button id="nextBtn">Next</button> 
+            <button id="previousBtn">Previous</button>
+        </footer>
+
+        <!--making the counter work-->
+        <script>
+
+            let current = 1;
+            const total = 10; //will change later off how many questions are there in index
+
+            const progressEle = document.getElementById("progress");
+            const nextBtn = document.getElementById("nextBtn");
+            const previousBtn = document.getElementById("previousBtn");
+
+            function updateProgress () {
+            progressEle.textContent = `${current}/${total}`; 
+            } 
+
+            function happened1() {
+                if(current<total) current++;
+                updateProgress();
+            }
+            function happened2() {
+                if(current>=2) current--;
+                updateProgress();
+            }
+
+            nextBtn.addEventListener("click", happened1);
+            previousBtn.addEventListener("click", happened2);
+
+
+        </script>
+
+
+    </body>
+</html>
